@@ -2,26 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* import font from assets */
+@font-face {
+  font-family: 'MostWasted';
+  src: url('../../public/assets/typography/Mostwasted.ttf');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.light {
+  @apply bg-gray-50;
+}
+
+.dark {
+  @apply bg-dark;
+}
+
+.font-main {
+  font-family: 'Lora', serif;
+}
+
+.font-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-graffiti {
+  font-family: 'MostWasted', sans-serif;
+}
+
+.image-shadow {
+  filter: drop-shadow(0px 4px 4px rgba(60, 60, 60, 0.20));
+}
+
+.dark .hero::after {
+  content: '';
+  opacity: 0.4;
+  filter: contrast(1);
+  background-image: url('../../public/assets/images/hero-dark-alt.png');
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+}
+
+.dark .sidenav .is-active span{
+  @apply text-neon;
+}
+
+.dark .sidenav .is-active span::before {
+  content: url('../../public/assets/images/spray.svg');
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin-left: -36px;
+  margin-top: -10px;
+}
+
+.sidenav .is-active span {
+  @apply text-dark;
+  @apply text-xl;
+  @apply py-2;
+  @apply opacity-100
+}
+
+.sidenav span {
+  @apply text-gray-500;
+  @apply opacity-40;
+  @apply text-base;
+  transition: all .2s ease;
+}
+
+/* Positions */
+.graffiti-position {
+  top: calc(-42%);
+  left: calc(-3%)
+}
+
+.sidenav-position {
+  position: fixed;
+  /* top: 50%; */
+  bottom: 5%;
+  right: 0px;
+  @apply pr-12;
+  /* transform: translate(-50%, -50%); */
+}
+
+/* Animations */
+html {
+  scroll-behavior: smooth;
+  transition: all 1s ease;
+  @apply scroll-smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+}
+
+.animate-transition {
+  transition: all 1s ease;
+}
+
+.quick-transition {
+  transition: all .2s ease;
+}
+
+.animate-transition-margin {
+  transition: margin-right 2s ease-in-out .5s;
 }
