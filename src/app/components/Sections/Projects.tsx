@@ -29,13 +29,12 @@ export interface ProjectProps {
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [isPrev, setIsPrev] = useState(false);
+  const [isNext, setIsNext] = useState(true);
   const isDark = theme === "dark";
 
 
   const [activeProject, setActiveProject] = useState<ProjectProps>();
-
-  const isPrev = useRef(true)
-  const isNext = useRef(true)
   const currentIndex = useRef(0)
 
   useEffect(() => setMounted(true), []);
@@ -45,11 +44,11 @@ export default function Projects() {
       setActiveProject(projects[currentIndex.current])
 
       if (currentIndex.current === 0) {
-        isPrev.current = false
+        setIsPrev(false)
       }
 
       if (currentIndex.current === projects.length - 1) {
-        isNext.current = false
+        setIsNext(false)
       }
     }
   }, [mounted])
@@ -58,10 +57,20 @@ export default function Projects() {
     if (currentIndex.current > 0) {
       currentIndex.current -= 1
       setActiveProject(projects[currentIndex.current])
-      isPrev.current = true
-      isNext.current = true
+
+      if (currentIndex.current === 0) {
+        setIsPrev(false)
+      } else {
+        setIsPrev(true)
+      }
+
+      if (currentIndex.current === projects.length - 1) {
+        setIsNext(false)
+      } else {
+        setIsNext(true)
+      }
     } else {
-      isPrev.current = false
+      setIsPrev(false)
     }
   }
 
@@ -69,10 +78,22 @@ export default function Projects() {
     if (currentIndex.current < projects.length - 1) {
       currentIndex.current += 1
       setActiveProject(projects[currentIndex.current])
-      isPrev.current = true
-      isNext.current = true
+      setIsPrev(true)
+
+      if (currentIndex.current === projects.length - 1) {
+        setIsNext(false)
+      } else {
+        setIsNext(true)
+      }
+
+      if (currentIndex.current === 0) {
+        setIsPrev(false)
+      } else {
+        setIsPrev(true)
+      }
     } else {
-      isNext.current = false
+      setIsNext(false)
+
     }
   }
 
@@ -95,7 +116,7 @@ export default function Projects() {
             <div className='sm:w-full font-sub mr-2'>
               <div className='flex items-center gap-4'>
                 <div className='w-fit bg-white dark:bg-darkAccent shadow-md p-1 rounded-lg flex justify-center items-center'>
-                  <Image width={45} height={45} src={activeProject?.logo} alt='sample' />
+                  <Image width={45} height={45} src={activeProject?.logo!} alt='sample' />
                 </div>
 
                 <h1 className='font-semibold text-2xl'>
@@ -120,12 +141,12 @@ export default function Projects() {
                 </p>
               </div>
               <div className='py-4 flex gap-2'>
-                <Button className={!isPrev ? 'disabled' : ''} onClick={() => handlePrev()}>
+                <Button disabled={!isPrev} className={!isPrev ? 'button-disabled' : ''} onClick={() => handlePrev()}>
                   <span>
                     <IconArrowLeft size={20} />
                   </span>
                 </Button>
-                <Button className={!isNext ? 'disabled' : ''} onClick={() => handleNext()}>
+                <Button disabled={!isNext} className={!isNext ? 'button-disabled' : ''} onClick={() => handleNext()}>
                   <span>
                     <IconArrowRight size={20} />
                   </span>
@@ -135,7 +156,7 @@ export default function Projects() {
 
             {/* Company List */}
             <div className='relative flex items-center'>
-              <Image className='w-full h-full object-cover rounded-xl' width={1200} height={1000} src={activeProject?.image} alt='sample' />
+              <Image className='w-full h-full object-cover rounded-xl' width={1200} height={1000} src={activeProject?.image!} alt='sample' />
               <div className='number-position w-[50px] h-[50px] bg-dark dark:bg-darkAccent rounded-lg flex justify-center items-center'>
                 <span className='font-bold text-xl text-white  p-4' >{currentIndex.current + 1}</span>
               </div>
