@@ -13,7 +13,7 @@
 }
 
 .light {
-  @apply bg-gray-50;
+  @apply bg-light;
 }
 
 .dark {
@@ -34,6 +34,10 @@
 
 .image-shadow {
   filter: drop-shadow(0px 4px 4px rgba(60, 60, 60, 0.20));
+}
+
+button .disabled {
+  @apply disabled:opacity-25
 }
 
 .dark .hero::after {
@@ -91,6 +95,12 @@
   right: 0px;
   @apply pr-12;
   /* transform: translate(-50%, -50%); */
+}
+
+.number-position {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Animations */

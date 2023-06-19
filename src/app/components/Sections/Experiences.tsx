@@ -11,7 +11,7 @@ import Image from 'next/image'
 import Button from '../Button/Button'
 import CompanyList from '../List/CompanyList'
 
-export default function GetInTouch() {
+export default function Experiences() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
@@ -34,7 +34,7 @@ export default function GetInTouch() {
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Headline */}
             <div className='sm:w-full font-sub mr-2'>
-              <h4 className='text-5xl py-3 font-semibold leading-tight font-sub '>
+              <h4 className='text-5xl py-4 font-semibold leading-tight font-sub '>
                 Creating useful and visually appealing web apps is my passion.
               </h4>
               <div className='flex flex-col gap-4 font-sub'>

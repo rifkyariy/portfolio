@@ -30,16 +30,16 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <div>
+    <>
       {/* The current theme is: {theme} */}
-      <button>
+      <button >
         {theme === "light" ? (
-          <IconMoon onClick={toggleTheme} size={24} />
+          <IconMoon className="hoverable" onClick={toggleTheme} size={24} />
         ) : (
-          <IconSun onClick={toggleTheme} size={24} />
+          <IconSun className="hoverable" onClick={toggleTheme} size={24} />
         )}
       </button>
-    </div>
+    </>
   );
 };
 

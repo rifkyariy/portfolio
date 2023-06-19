@@ -21,9 +21,10 @@ module.exports = {
         success: '#38b2ac',
         warning: '#ed8936',
         dark: '#1C1B21',
-        light: '#FCFCFC',
+        light: '#F8F8F8',
         transparent: 'transparent',
         neon: '#83FA26',
+        darkAccent: '#312F3D',
       },
       screens: {
         'sm': '0px',

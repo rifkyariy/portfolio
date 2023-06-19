@@ -75,9 +75,9 @@ export default function SideNav({ children, onClick, className, ...rest }: Siden
 
   const listItems = navItems.current.map((item, index) => {
     return (<>
-      <li className="sidenav text-right" key={index}>
+      <li className="sidenav text-right " key={item.name}>
         <button className={`${item.isActive ? 'is-active' : ''}`} onClick={() => scrolltoHash(item.id)}>
-          <span className="font-sub text-xl">{item.name}</span>
+          <span className="font-sub hover:text-xl dark:hover:text-gray-300 ">{item.name}</span>
         </button>
       </li>
     </>);

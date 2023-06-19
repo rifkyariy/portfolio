@@ -12,7 +12,7 @@ import Image from 'next/image'
 import Button from '../Button/Button'
 import CompanyList from '../List/CompanyList'
 
-export default function GetInTouch() {
+export default function Tools() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
@@ -20,7 +20,7 @@ export default function GetInTouch() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <section className="section flex justify-center h-screen w-full px-12 py-10">
+    <section className="section flex justify-center sm:h-full lg:h-screen w-full px-12 py-10">
       {/* Scroll on Middle of Page */}
       <div className="flex justify-center items-center w-full">
         <div id='tools' className='marker'></div>
@@ -30,7 +30,7 @@ export default function GetInTouch() {
           {/* Grid */}
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Company List */}
-            <div className='flex justify-center'>
+            <div className='flex justify-center md:order-last'>
               <Image src={isDark ? tools : toolsDark} className='w-4/5 image-shadow' alt='tools' />
             </div>
 
@@ -40,7 +40,7 @@ export default function GetInTouch() {
               <span className='text-base font-light uppercase dark:text-neon pb-3'>
                 Tools
               </span>
-              <h4 className='text-5xl py-3 font-semibold leading-tight font-sub '>
+              <h4 className='text-5xl py-4 font-semibold leading-tight font-sub '>
                 My arsenal of mighty tools as a frontend developer.
               </h4>
               <div className='flex flex-col gap-4 font-sub '>

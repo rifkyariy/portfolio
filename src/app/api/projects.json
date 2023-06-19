@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Kelas Jateng Project",
+    "headline": "headline",
+    "desc": "desc",
+    "logo": "/assets/images/projects/project-kelas-jateng.png",
+    "tag": ["tag1", "tag2", "tag3"],
+    "image": "/assets/images/projects/project-kelas-jateng-showcase.png",
+    "url": "link"
+  },
+  {
+    "name": "Kelas Jateng Project 1",
+    "headline": "headline",
+    "desc": "desc",
+    "logo": "/assets/images/projects/project-kelas-jateng.png",
+    "tag": ["tag1", "tag2", "tag3"],
+    "image": "/assets/images/projects/project-kelas-jateng-showcase.png",
+    "url": "link"
+  }
+]
