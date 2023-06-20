@@ -112,13 +112,13 @@ export default function Projects() {
 
 
   return (
-    <section className="section flex justify-center md:h-full lg:h-screen w-full px-12 py-10">
+    <section className="section flex justify-center md:h-full lg:h-screen w-full px-12 py-10" data-aos="zoom-in">
       {/* Scroll on Middle of Page */}
       <div className="flex justify-center items-center w-full">
         <div id='projects' className='marker'></div>
 
         {/* Content */}
-        <div className={`sm:w-full md:w-4/5 flex flex-col animate-transition ${!isLoaded ? 'opacity-0' : 'opacity-100'}`} data-aos="zoom-in">
+        <div className={`sm:w-full md:w-4/5 flex flex-col animate-transition ${!isLoaded ? 'opacity-0' : 'opacity-100'}`} >
           <span className='text-base font-light uppercase dark:text-neon pb-3'>
             Projects
           </span>
