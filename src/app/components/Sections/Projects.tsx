@@ -112,7 +112,7 @@ export default function Projects() {
 
 
   return (
-    <section className="section flex justify-center md:h-full lg:h-screen w-full px-12 py-10" data-aos="zoom-in">
+    <section className="section flex justify-center md:h-full lg:h-screen w-full px-12 py-10" >
       {/* Scroll on Middle of Page */}
       <div className="flex justify-center items-center w-full">
         <div id='projects' className='marker'></div>

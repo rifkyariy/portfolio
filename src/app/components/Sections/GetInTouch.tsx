@@ -18,12 +18,12 @@ export default function GetInTouch() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <section className="section flex h-screen w-full px-12 py-10" data-aos="zoom-in">
+    <section className="section flex h-screen w-full px-12 py-10">
       <div className="flex justify-center items-center">
         <div id='contact' className='marker'></div>
 
 
-        <div className="sm:max-w-80 md:max-w-[60%] flex flex-col items-center">
+        <div className="sm:max-w-80 md:max-w-[60%] flex flex-col items-center" >
           <>
             {
               mounted ? <Image width={200} src={mounted ? avatar : ''} alt="GetInTouch" /> : null
