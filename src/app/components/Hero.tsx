@@ -37,7 +37,7 @@ export default function Nav() {
           <>{mounted ? <Image className={`animate-transition sm:w-[100px]`} width={150} src={resolveAvatar()} alt="Logo" loading="lazy" /> : null}</>
 
         </div>
-        <div className='flex items-end sm:hidden md:flex'>
+        <div className='flex items-end sm:hidden md:flex' data-aos="zoom-in">
           <h1 className='font-regular font-main lg:text-8xl sm:text-5xl '>Hi,</h1>
           <>{mounted ? <Image className={`animate-transition sm:w-[80px] md:w-[100px] lg:w-[150px]`} width={150} src={resolveAvatar()} alt="Logo" loading="lazy" /> : null}</>
         </div>

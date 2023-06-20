@@ -38,10 +38,28 @@
   {
     "name": "Cartesion Project",
     "headline": "National Competiton for Art, Sport, Entrepreneur and Eduction Website",
-    "desc": "UNY Cartesion is a highly anticipated national competition presented by Universitas Negeri Yogyakarta, featuring four captivating categories: art, sports, entrepreneurship, and education. This prestigious event invites talented individuals from all over the nation to showcase their skills, creativity, and innovation in their respective fields",
+    "desc": "UNY Cartesion is a highly anticipated national competition presented by Universitas Negeri Yogyakarta, featuring four captivating categories: art, sports, entrepreneurship, and education. This prestigious event invites talented individuals from all over the nation to showcase their skills, creativity, and innovation in their respective fields.",
     "logo": "/assets/images/projects/logo-project-cartesion.png",
     "tag": ["Web Development", "Laravel"],
     "image": "/assets/images/projects/project-cartesion-showcase.png",
+    "url": "link"
+  },
+  {
+    "name": "Gizi Baik Anakku Project",
+    "headline": "Fueling Bright Futures: Gizi Baik Anakku, Nourishing Children for Life",
+    "desc": "Gizi Baik Anakku is a nutrition-focused app that provides valuable content and resources on child nutrition. With a wealth of information, tips, and guidance, the app aims to educate and empower parents in providing optimal nutrition for their children, promoting healthy growth and development.",
+    "logo": "/assets/images/projects/logo-project-bundapintar.png",
+    "tag": ["PWA Development", "Vue", "Nuxt"],
+    "image": "/assets/images/projects/project-bundapintar-showcase.png",
+    "url": "link"
+  },
+  {
+    "name": "Tekov Project",
+    "headline": "Unleash Your Animated World: Tekov, Where Creativity Takes Flight",
+    "desc": "Tekov is a web app dedicated to animation enthusiasts, offering engaging content and comprehensive courses on the art of animation. Unlock your creative potential, learn essential animation techniques, and bring your imagination to life with Tekov's immersive classes and resources.",
+    "logo": "/assets/images/projects/logo-project-tekov.png",
+    "tag": ["Web Development", "Vue 2", "Bootstrap"],
+    "image": "/assets/images/projects/project-tekov-showcase.png",
     "url": "link"
   }
 ]

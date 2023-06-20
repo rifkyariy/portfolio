@@ -124,7 +124,7 @@ export default function Projects() {
           </span>
 
           {/* Grid */}
-          <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
+          <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" data-aos="zoom-in">
             {/* Headline */}
             <div className='sm:w-full font-sub mr-2 sm:order-last lg:order-first'>
               <div className='flex items-center gap-4'>

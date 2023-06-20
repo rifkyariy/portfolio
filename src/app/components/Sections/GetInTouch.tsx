@@ -23,7 +23,7 @@ export default function GetInTouch() {
         <div id='contact' className='marker'></div>
 
 
-        <div className="sm:max-w-80 md:max-w-[60%] flex flex-col items-center" >
+        <div className="sm:max-w-80 md:max-w-[60%] flex flex-col items-center" data-aos="zoom-in">
           <>
             {
               mounted ? <Image width={200} src={mounted ? avatar : ''} alt="GetInTouch" /> : null
