@@ -34,7 +34,7 @@ export default function Experiences() {
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Headline */}
             <div className='sm:w-full font-sub mr-2'>
-              <h4 className='text-5xl py-4 font-semibold leading-tight font-sub '>
+              <h4 className='sm:text-4xl lg:text-5xl py-4 font-semibold leading-tight font-sub '>
                 Creating useful and visually appealing web apps is my passion.
               </h4>
               <div className='flex flex-col gap-4 font-sub'>

@@ -40,7 +40,7 @@ export default function Tools() {
               <span className='text-base font-light uppercase dark:text-neon pb-3'>
                 Tools
               </span>
-              <h4 className='text-5xl py-4 font-semibold leading-tight font-sub '>
+              <h4 className='sm:text-4xl lg:text-5xl py-4 font-semibold leading-tight font-sub '>
                 My arsenal of mighty tools as a frontend developer.
               </h4>
               <div className='flex flex-col gap-4 font-sub '>

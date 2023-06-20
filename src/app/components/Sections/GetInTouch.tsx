@@ -29,8 +29,8 @@ export default function GetInTouch() {
               mounted ? <Image width={200} src={mounted ? avatar : ''} alt="GetInTouch" /> : null
             }
           </>
-          <h1 className='font-regular font-sub lg:text-6xl sm:text-3xl text-center py-8'>Let me know if you want to talk about your potential collaboration!</h1>
-          <Button >
+          <h1 className='font-regular font-sub lg:text-6xl sm:text-3xl text-center py-8'>Let me know if you want to talk about our potential collaboration!</h1>
+          <Button onClick={(e) => { window.location.href = 'mailto:rifkyariy@gmail.com'; }}>
             <span>Send Me</span>
           </Button>
         </div>

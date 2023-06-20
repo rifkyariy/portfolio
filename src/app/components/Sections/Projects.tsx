@@ -126,30 +126,30 @@ export default function Projects() {
           {/* Grid */}
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Headline */}
-            <div className='sm:w-full font-sub mr-2'>
+            <div className='sm:w-full font-sub mr-2 sm:order-last'>
               <div className='flex items-center gap-4'>
                 <div className='w-fit bg-white dark:bg-darkAccent shadow-md p-1 rounded-lg flex justify-center items-center'>
                   <Image width={45} height={45} src={activeProject?.logo!} alt='sample' />
                 </div>
 
-                <h1 className='font-semibold text-2xl'>
+                <h1 className='font-semibold sm:text-sm lg:text-2xl'>
                   {activeProject?.name}
                 </h1>
               </div>
-              <h4 className='text-5xl py-4 font-semibold leading-tight font-sub '>
+              <h4 className='sm:text-3xl lg:text-5xl py-4 font-semibold leading-tight font-sub '>
                 {activeProject?.headline}
               </h4>
               <div className=' mb-4 flex gap-2'>
                 <>
                   {activeProject?.tag.map((tag, index) => (
                     <Pill key={index}>
-                      <span className='text-sm font-semibold' >{tag}</span>
+                      <span className='sm:text-[9px] md:text-sm font-semibold' >{tag}</span>
                     </Pill>
                   ))}
                 </>
               </div>
               <div className='flex flex-col gap-4 font-sub'>
-                <p>
+                <p className=' sm:text-ellipsis lg:text-left'>
                   {activeProject?.desc}
                 </p>
               </div>

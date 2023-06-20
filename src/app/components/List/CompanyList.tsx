@@ -65,21 +65,21 @@ export default function CompanyList() {
           <div className='flex items-center'>
             <Image className='image-shadow hoverable' src={resolveLogo(brand)} width={60} height={60} alt={brand.name} loading="lazy" />
             <div className='flex flex-col'>
-              <h1 className='text-sub text-xl px-4'>
+              <h1 className='text-sub sm:text-sm lg:text-xl px-4'>
                 {brand.role}
               </h1>
-              <span className='text-sub text-sm px-4 text-gray-800 dark:text-gray-100'>
+              <span className='text-sub sm:text-[10px] lg:text-sm px-4 text-gray-800 dark:text-gray-100'>
                 {brand.status}
               </span>
             </div>
           </div>
           <div className='flex flex-col items-end'>
             <Link href={brand.url}>
-              <h1 className='text-sub text-xl px-4 font-bold uppercase hoverable cursor-pointer'>
+              <h1 className='text-sub sm:text-sm lg:text-xl px-4 font-bold uppercase hoverable cursor-pointer sm:text-right'>
                 {brand.name}
               </h1>
             </Link>
-            <span className='text-sub text-sm px-4 text-gray-800 dark:text-gray-100'>
+            <span className='text-sub sm:text-[10px] lg:text-sm px-4 text-gray-800 dark:text-gray-100 sm:text-right'>
               {brand.date}
             </span>
           </div>

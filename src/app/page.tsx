@@ -50,6 +50,11 @@ export default function Home() {
       <GetInTouch />
 
       {/*  */}
+      <div className="footer flex justify-center">
+        <span className="text-sm font-light text-center  py-6">
+          © 2023 Rifky Ari. All rights reserved. Build with Next JS.
+        </span>
+      </div>
 
     </main>
   )
