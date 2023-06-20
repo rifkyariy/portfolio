@@ -118,7 +118,7 @@ export default function Projects() {
         <div id='projects' className='marker'></div>
 
         {/* Content */}
-        <div className={`sm:w-full md:w-4/5 flex flex-col animate-transition ${!isLoaded ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`sm:w-full md:w-4/5 flex flex-col animate-transition ${!isLoaded ? 'opacity-0' : 'opacity-100'}`} data-aos="zoom-in">
           <span className='text-base font-light uppercase dark:text-neon pb-3'>
             Projects
           </span>

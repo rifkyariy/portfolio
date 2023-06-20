@@ -25,7 +25,7 @@ export default function Experiences() {
         <div id='experiences' className='marker'></div>
 
         {/* Content */}
-        <div className='sm:w-full md:w-4/5 flex flex-col'>
+        <div className='sm:w-full md:w-4/5 flex flex-col' data-aos="zoom-in">
           <span className='text-base font-light uppercase dark:text-neon pb-3'>
             Experiences
           </span>

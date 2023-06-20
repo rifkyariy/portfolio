@@ -26,7 +26,7 @@ export default function Tools() {
         <div id='tools' className='marker'></div>
 
         {/* Content */}
-        <div className='sm:w-full md:w-4/5 flex flex-col'>
+        <div className='sm:w-full md:w-4/5 flex flex-col' data-aos="zoom-in">
           {/* Grid */}
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Company List */}

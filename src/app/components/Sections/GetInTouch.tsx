@@ -18,7 +18,7 @@ export default function GetInTouch() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <section id='' className="section flex h-screen w-full px-12 py-10">
+    <section className="section flex h-screen w-full px-12 py-10" data-aos="zoom-in">
       <div className="flex justify-center items-center">
         <div id='contact' className='marker'></div>
 

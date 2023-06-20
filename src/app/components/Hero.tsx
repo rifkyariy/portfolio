@@ -30,7 +30,7 @@ export default function Nav() {
   }
 
   return (
-    <section className="section hero flex justify-center h-screen w-full px-12 py-10 animate-transition">
+    <section className="section hero flex justify-center h-screen w-full px-12 py-10 animate-transition" data-aos="zoom-in">
       <div className='flex flex-col justify-center '>
         <div id='overview' className='marker'></div>
         <div className='sm:block md:hidden'>
