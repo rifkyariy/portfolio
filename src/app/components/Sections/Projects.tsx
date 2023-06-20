@@ -32,6 +32,7 @@ export default function Projects() {
   const [isPrev, setIsPrev] = useState(false);
   const [isNext, setIsNext] = useState(true);
   const isDark = theme === "dark";
+  const [isLoaded, setIsLoaded] = useState(false);
 
 
   const [activeProject, setActiveProject] = useState<ProjectProps>();
@@ -41,6 +42,7 @@ export default function Projects() {
 
   useEffect(() => {
     if (mounted) {
+      setIsLoaded(true)
       setActiveProject(projects[currentIndex.current])
 
       if (currentIndex.current === 0) {
@@ -53,48 +55,59 @@ export default function Projects() {
     }
   }, [mounted])
 
-  const handlePrev = () => {
-    if (currentIndex.current > 0) {
-      currentIndex.current -= 1
-      setActiveProject(projects[currentIndex.current])
+  const sleep = (ms: number | undefined) =>
+    new Promise(resolve => setTimeout(resolve, ms));
 
-      if (currentIndex.current === 0) {
+  const handlePrev = async () => {
+    setIsLoaded(false)
+    sleep(600).then(() => {
+      if (currentIndex.current > 0) {
+        currentIndex.current -= 1
+        setIsLoaded(true)
+        setActiveProject(projects[currentIndex.current])
+
+        if (currentIndex.current === 0) {
+          setIsPrev(false)
+        } else {
+          setIsPrev(true)
+        }
+
+        if (currentIndex.current === projects.length - 1) {
+          setIsNext(false)
+        } else {
+          setIsNext(true)
+        }
+      } else {
         setIsPrev(false)
-      } else {
-        setIsPrev(true)
       }
-
-      if (currentIndex.current === projects.length - 1) {
-        setIsNext(false)
-      } else {
-        setIsNext(true)
-      }
-    } else {
-      setIsPrev(false)
-    }
+    });
   }
 
-  const handleNext = () => {
-    if (currentIndex.current < projects.length - 1) {
-      currentIndex.current += 1
-      setActiveProject(projects[currentIndex.current])
-      setIsPrev(true)
-
-      if (currentIndex.current === projects.length - 1) {
-        setIsNext(false)
-      } else {
-        setIsNext(true)
-      }
-
-      if (currentIndex.current === 0) {
-        setIsPrev(false)
-      } else {
+  const handleNext = async () => {
+    setIsLoaded(false)
+    sleep(600).then(() => {
+      if (currentIndex.current < projects.length - 1) {
+        currentIndex.current += 1
+        setIsLoaded(true)
+        setActiveProject(projects[currentIndex.current])
         setIsPrev(true)
-      }
-    } else {
-      setIsNext(false)
 
-    }
+        if (currentIndex.current === projects.length - 1) {
+          setIsNext(false)
+        } else {
+          setIsNext(true)
+        }
+
+        if (currentIndex.current === 0) {
+          setIsPrev(false)
+        } else {
+          setIsPrev(true)
+        }
+      } else {
+        setIsNext(false)
+
+      }
+    });
   }
 
 
@@ -105,7 +118,7 @@ export default function Projects() {
         <div id='projects' className='marker'></div>
 
         {/* Content */}
-        <div className='sm:w-full md:w-4/5 flex flex-col'>
+        <div className={`sm:w-full md:w-4/5 flex flex-col animate-transition ${!isLoaded ? 'opacity-0' : 'opacity-100'}`}>
           <span className='text-base font-light uppercase dark:text-neon pb-3'>
             Projects
           </span>
@@ -154,11 +167,13 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Company List */}
-            <div className='relative flex items-center'>
-              <Image className='w-full h-full object-cover rounded-xl' width={1200} height={1000} src={activeProject?.image!} alt='sample' />
-              <div className='number-position w-[50px] h-[50px] bg-dark dark:bg-darkAccent rounded-lg flex justify-center items-center'>
-                <span className='font-bold text-xl text-white  p-4' >{currentIndex.current + 1}</span>
+            {/* Project Image */}
+            <div className='flex items-center'>
+              <div className='relative h-fit flex items-center justify-center'>
+                <Image className='w-full object-cover rounded-xl image-shadow' width={1200} height={1000} src={activeProject?.image!} alt='sample' />
+                <div className='number-position w-[50px] h-[50px] bg-dark dark:bg-darkAccent rounded-lg flex justify-center items-center'>
+                  <span className='font-bold text-xl text-white  p-4' >{currentIndex.current + 1}</span>
+                </div>
               </div>
             </div>
           </div>
