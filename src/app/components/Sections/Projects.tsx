@@ -126,7 +126,7 @@ export default function Projects() {
           {/* Grid */}
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Headline */}
-            <div className='sm:w-full font-sub mr-2 sm:order-last'>
+            <div className='sm:w-full font-sub mr-2 sm:order-last lg:order-first'>
               <div className='flex items-center gap-4'>
                 <div className='w-fit bg-white dark:bg-darkAccent shadow-md p-1 rounded-lg flex justify-center items-center'>
                   <Image width={45} height={45} src={activeProject?.logo!} alt='sample' />

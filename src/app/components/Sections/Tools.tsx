@@ -30,7 +30,7 @@ export default function Tools() {
           {/* Grid */}
           <div className="w-full grid sm:grid-cols-1 xl:grid-cols-2 gap-12" >
             {/* Company List */}
-            <div className='flex justify-center md:order-last'>
+            <div className='flex justify-center md:order-last lg:order-first'>
               <Image src={isDark ? tools : toolsDark} className='w-4/5 image-shadow' alt='tools' />
             </div>
 
