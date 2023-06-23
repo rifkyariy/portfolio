@@ -11,50 +11,67 @@ import Experiences from "./components/Sections/Experiences"
 import Tools from "./components/Sections/Tools"
 import Projects from "./components/Sections/Projects"
 import GetInTouch from "./components/Sections/GetInTouch"
+import Loading from "./components/Loading"
 
 
 // Hooks
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
+  // delay load page for 10s
+  useEffect(() => {
+    setTimeout(() => {
+      setMounted(true);
+    }, 2000);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center">
-      {/* Apply Cursor to All Components */}
       <Cursor />
 
-      {/* Nav */}
-      <Nav />
-      <SideNav />
+      <>{!mounted ?
+        <Loading />
+        :
+        <div>
+          {/* Apply Cursor to All Components */}
 
-      {/* Hero */}
-      <Hero />
+          {/* Nav */}
+          <Nav />
+          <SideNav />
 
-      {/* Sections */}
-      {/* Experiences */}
-      <Experiences />
+          {/* Hero */}
+          <Hero />
 
-      {/* Tools */}
-      <Tools />
+          {/* Sections */}
+          {/* Experiences */}
+          <Experiences />
 
-      {/* Projects */}
-      <Projects />
+          {/* Tools */}
+          <Tools />
 
-      {/* Get in touch */}
-      <GetInTouch />
+          {/* Projects */}
+          <Projects />
 
-      {/*  */}
-      <div className="footer flex justify-center">
-        <span className="text-sm font-light text-center  py-6">
-          © 2023 Rifky Ari. All rights reserved. Build with Next JS.
-        </span>
-      </div>
+          {/* Get in touch */}
+          <GetInTouch />
+
+          {/*  */}
+          <div className="footer flex justify-center">
+            <span className="text-sm font-light text-center  py-6">
+              © 2023 Rifky Ari. All rights reserved. Build with Next JS.
+            </span>
+          </div>
+        </div>
+      }</>
 
     </main>
   )

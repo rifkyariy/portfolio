@@ -30,14 +30,14 @@ export default function Nav() {
   }
 
   return (
-    <section className="section hero flex justify-center h-screen w-full px-12 py-10 animate-transition" >
+    <section className={`section hero flex justify-center h-screen w-full px-12 py-10 animate-transition ${mounted ? 'opacity-100' : 'opacity-0'}`} >
       <div className='flex flex-col justify-center '>
         <div id='overview' className='marker'></div>
         <div className='sm:block md:hidden'>
           <>{mounted ? <Image className={`animate-transition sm:w-[100px]`} width={150} src={resolveAvatar()} alt="Logo" loading="lazy" /> : null}</>
 
         </div>
-        <div className='flex items-end sm:hidden md:flex' data-aos="zoom-in">
+        <div className='flex items-end sm:hidden md:flex' >
           <h1 className='font-regular font-main lg:text-8xl sm:text-5xl '>Hi,</h1>
           <>{mounted ? <Image className={`animate-transition sm:w-[80px] md:w-[100px] lg:w-[150px]`} width={150} src={resolveAvatar()} alt="Logo" loading="lazy" /> : null}</>
         </div>

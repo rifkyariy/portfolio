@@ -129,7 +129,7 @@ export default function Projects() {
             <div className='sm:w-full font-sub mr-2 sm:order-last lg:order-first'>
               <div className='flex items-center gap-4'>
                 <div className='w-fit bg-white dark:bg-darkAccent shadow-md p-1 rounded-lg flex justify-center items-center'>
-                  <Image width={45} height={45} src={activeProject?.logo!} alt='sample' />
+                  <Image width={45} height={45} src={activeProject?.logo!} alt='sample' loading="lazy" />
                 </div>
 
                 <h1 className='font-semibold sm:text-sm lg:text-2xl'>
