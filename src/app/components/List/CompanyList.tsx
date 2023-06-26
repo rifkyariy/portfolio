@@ -53,9 +53,9 @@ export default function CompanyList() {
 
   const resolveLogo = (brand: any) => {
     if (theme === "light") {
-      return `https://rifkyariy.github.io/portfolio/${brand.logo}`
+      return brand.logo
     }
-    return `https://rifkyariy.github.io/portfolio/${brand.logoDark}`
+    return brand.logoDark
   }
 
   const listOfBrands = brands.map((brand) => {
