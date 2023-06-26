@@ -36,12 +36,14 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Cursor />
-
       <>{!mounted ?
-        <Loading />
+        <>
+          <Cursor />
+          <Loading />
+        </>
         :
         <div>
+          <Cursor />
           {/* Apply Cursor to All Components */}
 
           {/* Nav */}
