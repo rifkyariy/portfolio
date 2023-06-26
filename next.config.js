@@ -3,7 +3,7 @@ const path = require('path')
 
 const nextConfig = {
   output: 'export',
-  basePath: 'https://rifkyariy.github.io/portfolio/',
+  basePath: '/portfolio',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
