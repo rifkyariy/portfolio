@@ -3,63 +3,63 @@
     "name": "Kelas Jateng Project",
     "headline": "Learning Management System For Jawa Tengah Province",
     "desc": "The Kelas Jateng Project is creating Custom Learning Management System (LMS) for Jawa Tengah Province's Vocational Schools is a specialized digital platform designed to enhance the learning experience in Vocational schools across the province. This customized LMS will provide a user-friendly interface, seamless integration with the Vocational school curriculum, and a range of features to support online learning, collaboration, and assessment.",
-    "logo": "/public/assets/images/projects/logo-project-kelas-jateng.png",
+    "logo": "/assets/images/projects/logo-project-kelas-jateng.png",
     "tag": ["Web Development", "Vue 2", "Bootstrap", "REST API"],
-    "image": "/public/assets/images/projects/project-kelas-jateng-showcase.png",
+    "image": "/assets/images/projects/project-kelas-jateng-showcase.png",
     "url": "link"
   },
   {
     "name": "Pasinaon Project",
     "headline": "Compact Smart School Ecosystem Apps",
     "desc": "Pasinaon is a revolutionary application that brings a smart school system to revolutionize the way we learn and teach. With advanced technology and interactive features, Pasinaon creates an unparalleled educational experience. Enabling personalized, collaborative, and inclusive learning, Pasinaon helps students develop deep understanding and prepares them for a bright future.",
-    "logo": "/public/assets/images/projects/logo-project-pasinaon.png",
+    "logo": "/assets/images/projects/logo-project-pasinaon.png",
     "tag": ["Web Development", "Vue 3", "Vuetify", "REST API"],
-    "image": "/public/assets/images/projects/project-pasinaon-showcase.png",
+    "image": "/assets/images/projects/project-pasinaon-showcase.png",
     "url": "link"
   },
   {
     "name": "IntegraCI Project",
     "headline": "IntegraCI The DevOps Platform",
     "desc": "IntegraCI is a powerful DevOps platform, similar to CircleCI, that streamlines and automates software development processes. With IntegraCI, teams can effortlessly build, test, and deploy applications, enabling efficient collaboration, continuous integration, and rapid delivery of high-quality software.",
-    "logo": "/public/assets/images/projects/logo-project-integraci.png",
+    "logo": "/assets/images/projects/logo-project-integraci.png",
     "tag": ["Web Development", "React", "Typescript", "Devtron"],
-    "image": "/public/assets/images/projects/project-integraci-showcase.png",
+    "image": "/assets/images/projects/project-integraci-showcase.png",
     "url": "link"
   },
   {
     "name": "Nalarin Project",
     "headline": "National 'Penalaran' Competiton Website",
     "desc": "Nalarin is a prestigious national competition organized by Universitas Negeri Yogyakarta, offering participants four exciting categories to showcase their talents: speech, short opinion video, essay, and poster. This esteemed competition provides a platform for individuals to express their ideas, creativity, and critical thinking skills, as they compete against the best minds from across the country.",
-    "logo": "/public/assets/images/projects/logo-project-nalarin.png",
+    "logo": "/assets/images/projects/logo-project-nalarin.png",
     "tag": ["Web Development", "Laravel"],
-    "image": "/public/assets/images/projects/project-nalarin-showcase.png",
+    "image": "/assets/images/projects/project-nalarin-showcase.png",
     "url": "link"
   },
   {
     "name": "Cartesion Project",
     "headline": "National Competiton for Art, Sport, Entrepreneur and Eduction Website",
     "desc": "UNY Cartesion is a highly anticipated national competition presented by Universitas Negeri Yogyakarta, featuring four captivating categories: art, sports, entrepreneurship, and education. This prestigious event invites talented individuals from all over the nation to showcase their skills, creativity, and innovation in their respective fields.",
-    "logo": "/public/assets/images/projects/logo-project-cartesion.png",
+    "logo": "/assets/images/projects/logo-project-cartesion.png",
     "tag": ["Web Development", "Laravel"],
-    "image": "/public/assets/images/projects/project-cartesion-showcase.png",
+    "image": "/assets/images/projects/project-cartesion-showcase.png",
     "url": "link"
   },
   {
     "name": "Gizi Baik Anakku Project",
     "headline": "Fueling Bright Futures: Gizi Baik Anakku, Nourishing Children for Life",
     "desc": "Gizi Baik Anakku is a nutrition-focused app that provides valuable content and resources on child nutrition. With a wealth of information, tips, and guidance, the app aims to educate and empower parents in providing optimal nutrition for their children, promoting healthy growth and development.",
-    "logo": "/public/assets/images/projects/logo-project-bundapintar.png",
+    "logo": "/assets/images/projects/logo-project-bundapintar.png",
     "tag": ["PWA Development", "Vue", "Nuxt"],
-    "image": "/public/assets/images/projects/project-bundapintar-showcase.png",
+    "image": "/assets/images/projects/project-bundapintar-showcase.png",
     "url": "link"
   },
   {
     "name": "Tekov Project",
     "headline": "Unleash Your Animated World: Tekov, Where Creativity Takes Flight",
     "desc": "Tekov is a web app dedicated to animation enthusiasts, offering engaging content and comprehensive courses on the art of animation. Unlock your creative potential, learn essential animation techniques, and bring your imagination to life with Tekov's immersive classes and resources.",
-    "logo": "/public/assets/images/projects/logo-project-tekov.png",
+    "logo": "/assets/images/projects/logo-project-tekov.png",
     "tag": ["Web Development", "Vue 2", "Bootstrap"],
-    "image": "/public/assets/images/projects/project-tekov-showcase.png",
+    "image": "/assets/images/projects/project-tekov-showcase.png",
     "url": "link"
   }
 ]

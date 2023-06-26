@@ -1,15 +1,19 @@
 "use client";
+// Assets
+import avatar from 'public/assets/images/avatar-get-touch.png'
 
 // State
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 // Components
+import Image from 'next/image'
+import Button from '../Button/Button'
 import CompanyList from '../List/CompanyList'
 
 export default function Experiences() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
   useEffect(() => setMounted(true), []);
