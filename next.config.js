@@ -3,6 +3,11 @@ const path = require('path')
 
 const nextConfig = {
   output: 'export',
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+  assetPrefix: './',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
