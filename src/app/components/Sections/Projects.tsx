@@ -1,7 +1,5 @@
 "use client";
 // Assets
-import sampleImage from 'public/assets/images/projects/project-kelas-jateng-showcase.png'
-import sampleLogo from 'public/assets/images/projects/project-kelas-jateng.png'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 
 // State
@@ -28,7 +26,7 @@ export interface ProjectProps {
 
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [isPrev, setIsPrev] = useState(false);
   const [isNext, setIsNext] = useState(true);
   const isDark = theme === "dark";

@@ -9,8 +9,6 @@ import { useEffect, useState } from "react";
 
 // Components
 import Image from 'next/image'
-import Button from '../Button/Button'
-import CompanyList from '../List/CompanyList'
 
 export default function Tools() {
   const [mounted, setMounted] = useState(false);
